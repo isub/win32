@@ -179,7 +179,8 @@ bool SignMessage(CRYPT_DATA_BLOB *pSignedMessageBlob)
     SigParams.dwMsgEncodingType = MY_ENCODING_TYPE;
     SigParams.pSigningCert = pSignerCert;
     SigParams.HashAlgorithm.pszObjId = szOID_RSA_SHA1RSA;
-    SigParams.HashAlgorithm.Parameters.cbData = NULL;
+    SigParams.HashAlgorithm.Parameters.cbData = 0;
+    SigParams.HashAlgorithm.Parameters.pbData = NULL;
     SigParams.cMsgCert = 1;
     SigParams.rgpMsgCert = &pSignerCert;
     SigParams.cAuthAttr = 0;
