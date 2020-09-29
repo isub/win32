@@ -137,7 +137,7 @@ bool SignMessage(CRYPT_DATA_BLOB *pSignedMessageBlob)
 
     // Create the MessageArray and the MessageSizeArray.
     const BYTE* MessageArray[] = {pbMessage};
-    DWORD_PTR MessageSizeArray[1];
+    DWORD MessageSizeArray[1];
     MessageSizeArray[0] = cbMessage;
 
     //  Begin processing. 
